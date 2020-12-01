@@ -1,0 +1,3 @@
+/home/robert/adventOfCode/day01/CMakeFiles/edit_cache.dir
+/home/robert/adventOfCode/day01/CMakeFiles/rebuild_cache.dir
+/home/robert/adventOfCode/day01/CMakeFiles/partyInvitation.dir
