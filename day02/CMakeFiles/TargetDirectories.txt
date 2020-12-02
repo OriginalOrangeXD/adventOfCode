@@ -1,0 +1,3 @@
+/home/robert/adventOfCode/day02/CMakeFiles/rebuild_cache.dir
+/home/robert/adventOfCode/day02/CMakeFiles/edit_cache.dir
+/home/robert/adventOfCode/day02/CMakeFiles/day02.dir

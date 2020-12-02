@@ -1,0 +1,50 @@
+#include<iostream>
+#include<fstream>
+#include<vector>
+#include<string>
+
+int main()
+{
+	std::fstream newfile;
+	std::vector<std::string> nums;
+	newfile.open("/home/robert/adventOfCode/day02/input.txt", std::ios::in);
+	if(newfile.is_open()){
+		std::string tp;
+		while(getline(newfile, tp))
+		{
+			nums.push_back(tp);
+		}
+		newfile.close();
+	}
+	std::string delim1 = "-";
+	std::string delim2 = " ";
+	std::string delim3 = ":";
+	unsigned long int totalCount{};
+	for(unsigned long int i =0; i < nums.size(); i++)
+	{
+		int count{};
+		int min = std::stoi(nums[i].substr(0, nums[i].find(delim1)));
+		int max = std::stoi(nums[i].substr(nums[i].find(delim1)+1 , nums[i].find(delim2)));
+		std::cout << nums[i].find(":")-1;
+		//int test = nums[i].find(":")-1;
+		std::cout << "\n" << nums[i].substr(0+4,1);
+		std::string y = nums[i].substr(nums[i].find(":")-1);//.substr(nums[i].find(delim3)-1,nums[i].find(delim3));
+		std::string a = nums[i].substr(nums[i].find(":")+2, nums[i].size());
+		std::cout << "\n\n" << min << " \n" << max << " \n" << y << " \n" << a << "\n";
+		for(unsigned long int x =0; x < a.size(); x++)
+		{
+			std::string tmp{a[x]};
+			if(tmp == y)
+			{
+				count++;
+			}
+		}
+		if(count <= max && count >=min)
+		{
+			totalCount++;
+		}
+
+
+	}
+	std::cout << " \n\n\n" << totalCount << std::endl;
+}
